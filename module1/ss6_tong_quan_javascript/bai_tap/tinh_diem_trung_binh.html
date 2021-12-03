@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TÍNH ĐIỂM TRUNG BÌNH</h1>
+<button onclick="avg();">đIỂM trung bình</button>
+<h1 id="avg">Kết quả </h1>
+<label>Điểm Toán :</label>
+<input id="T" type="text" name="Toán"/><br><br>
+<label>Điểm Lí :</label>
+<input id="L" type="text" name="Lí"/><br><br>
+<label>Điểm Hóa :</label>
+<input id="H" type="text" name="Hóa"/><br><br>
+<script>
+alert("Tính điểm trung bình cộng")
+    function avg () {
+        let T = document.getElementById("T").value;
+        T = parseInt(T);
+        let L = document.getElementById("L").value;
+        L = parseInt(L);
+        let H = document.getElementById("H").value;
+        H = parseInt(H);
+        let avg = (T + L + H)/3
+        alert("Điểm trung bình= " + avg);
+    }
+</script>
+</body>
+</html>
