@@ -12,32 +12,32 @@
         <tr/>
 
         <tr>
-            <td><input type="button" value="1" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="2" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="3" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="+" onclick="nhapLieu(this.value)"/></td>
+            <td><input type="button" value="1" onclick="nhapLieu(1)"/></td>
+            <td><input type="button" value="2" onclick="nhapLieu(2)"/></td>
+            <td><input type="button" value="3" onclick="nhapLieu(3)"/></td>
+            <td><input type="button" value="+" onclick="nhapLieu('+')"/></td>
 
         </tr>
 
         <tr>
-            <td><input type="button" value="4" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="5" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="6" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="-" onclick="nhapLieu(this.value)"/></td>
+            <td><input type="button" value="4" onclick="nhapLieu(4)"/></td>
+            <td><input type="button" value="5" onclick="nhapLieu(5)"/></td>
+            <td><input type="button" value="6" onclick="nhapLieu(6)"/></td>
+            <td><input type="button" value="-" onclick="nhapLieu('-')"/></td>
         </tr>
 
         <tr>
-            <td><input type="button" value="7" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="8" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="9" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="*" onclick="nhapLieu(this.value)"/></td>
+            <td><input type="button" value="7" onclick="nhapLieu(7)"/></td>
+            <td><input type="button" value="8" onclick="nhapLieu(8)"/></td>
+            <td><input type="button" value="9" onclick="nhapLieu(9)"/></td>
+            <td><input type="button" value="*" onclick="nhapLieu('*')"/></td>
         </tr>
 
         <tr>
-            <td><input type="button" value="C" onclick="nhapLieu(C)"/></td>
-            <td><input type="button" value="0" onclick="nhapLieu(this.value)"/></td>
-            <td><input type="button" value="=" onclick="Tinh('=')"/></td>
-            <td><input type="button" value="/" onclick="nhapLieu(this.value)"/></td>
+            <td><input type="reset" value="C" onclick="nhapLieu(C)"/></td>
+            <td><input type="button" value="0" onclick="nhapLieu(0)"/></td>
+            <td><input type="button" value="=" onclick="tinh('=')"/></td>
+            <td><input type="button" value="/" onclick="nhapLieu('/')"/></td>
         </tr>
     </table>
 </form>
@@ -47,10 +47,14 @@ function nhapLieu(val) {
     document.getElementById("nhapSo").value +=val;
 
 }
-function Tinh() {
-let bieuThuc = document.getElementById("nhapSo").value;
-document.getElementById("nhapSo").value = eval(bieuThuc);
+function tinh() {
+    let bieuThuc = document.getElementById("nhapSo").value;
+    document.getElementById("nhapSo").value = eval(bieuThuc);
 }
+// function xoa() {
+//     document.getElementById("window").value = "";
+// }
+
 </script>
 </body>
 </html>

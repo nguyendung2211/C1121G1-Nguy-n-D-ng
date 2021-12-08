@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+ let s = parseInt(prompt("Nhap số phút gọi:"))
+ const Phithuebao= 25000
+ let a = 200;
+ let b = 400;
+ let d='Giacuoc';
+ let e='tong';
+ if(s>200){
+     d = (s-200)*a*b*600;
+     e = 0.01*d + 25000;
+     alert(e +"VNĐ");
+ }
+ else if(s>50){
+     d =(s-50)*b*600;
+     e=0.01*d+25000;
+     alert(e +"VNĐ");
+ }
+ else{
+     d=s*60;
+     e=0.01*d+25000;
+     alert(e +"VNĐ");
+ }
+
+</script>
+</body>
+</html>
