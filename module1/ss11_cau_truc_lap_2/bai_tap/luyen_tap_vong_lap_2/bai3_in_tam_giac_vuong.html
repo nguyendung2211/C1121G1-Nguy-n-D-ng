@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let n = 5;
+    //Hình 1
+    // for(let i = 0; i <= n; i++){
+    //     for(let j =0; j <= i; j++){
+    //         document.write('*')
+    //     }
+    //     document.write('<br>')
+    // }
+
+    //Hình 2
+    // for (let i = 0; i <= n; i++) {
+    //     for (j = n; j > i; j--) {
+    //         document.write("*")
+    //     }
+    //     document.write('<br>')
+    // }
+
+//    Hình 3
+//     for(let i = 0; i <= n; i++){
+//         for(let k = n; k > n; k--){
+//             document.write("1")
+//         }
+//         for(j=n; j>i; j--){
+//             document.write("*")
+//         }
+//         document.write("<br>")
+//     }
+
+//    Hình 4
+    for ( let i=0;i<n;i++){
+        for (let j=0;j<=i;j++){
+            document.write("2")
+        }
+        for (let k =n ; k>i ; k--){
+            document.write("*")
+        }
+        document.write("<br>")
+    }
+
+
+</script>
+</body>
+</html>
