@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let n = parseInt(prompt("Nhập số lượng phần tử"));
+    for(let i = 0; i < n;i++){
+        a[i] = parseInt(prompt("Giá trị phần tư thứ "+ i));
+        console.log(a[i]);
+    }
+    let max = a[0];
+    let sum = 0;
+    let trungBinh = 0;
+    let index=0;
+    for(let i = 0; i < a.length; i++){
+        sum += a[i];
+        if(max < a[i]){
+            max = a[i]
+            index = i;
+        console.log(max)
+        }
+    trungBinh = sum/(i+1);
+    }
+
+    document.write("max: " + max + " tại vị trí " + index + " giá trị trung bình của các phần tử trong mảng là " + trungBinh);
+
+</script>
+</body>
+</html>

@@ -6,7 +6,21 @@
 </head>
 <body>
 <script>
-
+    let doDaiMang = parseInt(prompt("Nhập số phần tử của mảng"));
+    let daySoNguyen = new Array(doDaiMang);
+    let demSoLonHon10 = 0;
+    let a = 0;
+    while (a < doDaiMang) {
+        let soNguyen = parseInt(prompt("Nhập vào phần tử " + a));
+        daySoNguyen[a] = soNguyen;
+        a++
+    }
+    for (let i = 0; i < daySoNguyen.length; i++) {
+        if (daySoNguyen[i] >= 10) {
+            demSoLonHon10 += 1;
+        }
+    }
+    document.write("Có " + demSoLonHon10 + " số nguyên lớn hơn 10");
 </script>
 </body>
 </html>

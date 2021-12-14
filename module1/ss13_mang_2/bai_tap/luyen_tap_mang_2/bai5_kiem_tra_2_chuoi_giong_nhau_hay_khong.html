@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let a = prompt("Nhập chuỗi thứ 1");
+mang1 = a.split("");
+let b = prompt("Nhập chuỗi thứ 2");
+mang2 = b.split("");
+let result = "";
+if(mang1.length == mang2.length){
+    for(let i = 0; i < mang1.length; i++){
+        if(mang1[i] !== mang2[i]){
+            result = "2 chuỗi khác nhau";
+            break;
+        }else {
+            result = "2 Chuỗi giống nhau";
+        }
+    }
+}else{
+    result = "2 chuỗi khác nhau";
+}
+alert(result);
+</script>
+</body>
+</html>

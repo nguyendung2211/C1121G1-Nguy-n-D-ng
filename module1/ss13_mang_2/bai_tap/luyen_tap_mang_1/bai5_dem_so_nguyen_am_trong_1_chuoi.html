@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let n = parseInt(prompt("Nhập số lượng phần tử"))
+    let soNguyenAm = 0;
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt("Nhập phần tử thứ " + i));
+        console.log(a[i]);
+        if (a[i] < 0) {
+            soNguyenAm += 1;
+        }
+    }
+    document.write("Có " + soNguyenAm + " số nguyên âm");
+</script>
+</body>
+</html>
