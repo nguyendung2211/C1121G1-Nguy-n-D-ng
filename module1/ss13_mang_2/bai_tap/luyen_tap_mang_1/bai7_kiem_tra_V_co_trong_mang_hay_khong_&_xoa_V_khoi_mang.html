@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [3,44,2,5,7,33,22,44,55,99];
+    let numberV = parseInt(prompt("Nhập số nguyên V: "));
+    for(let i = 0; i < array.length; i++){
+        if(numberV == array[i]){
+            array.splice(i,1,0);
+        }
+    }
+    alert(array);
+</script>
+</body>
+</html>

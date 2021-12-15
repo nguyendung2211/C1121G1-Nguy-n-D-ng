@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numberV = parseInt(prompt("Nhập vào một số nguyên V :"));
+    let number = new Array(10);
+    for (let i = 0; i < number.length; i++) {
+        number[i] = parseInt(prompt("Nhập vào phần tử của mảng " + i));
+        console.log(number);
+    }
+    let result = " ";
+    for (let i = 0; i < number.length; i++) {
+        if (numberV == number[i]) {
+            result = "V is in number";
+            break;
+        } else {
+            result = "V is not in number";
+        }
+    }
+    document.write(result);
+</script>
+</body>
+</html>
