@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function footToMetsrs(foot) {
+        return 0.305 * foot;
+    }
+
+    function meterTofoot(meter) {
+        return 3.279 * meter;
+    }
+
+    let input = parseInt(prompt("1.Chuyển từ foot sang meters" + "\n" + "2.Chuyển từ meters sang foot"));
+    switch (input) {
+        case 1:
+            let foot = parseInt(prompt("Nhập số của foot"));
+            alert("Kết quả: " + footToMetsrs(foot));
+            break;
+        case 2:
+            let meter = parseInt(prompt("Nhập số của meter"));
+            alert("Kết quả: " + meterTofoot(meter));
+            break;
+        default:
+            alert("Bạn chỉ được chọn 1 trong 2 lựa chọn trên!")
+    }
+</script>
+</body>
+</html>

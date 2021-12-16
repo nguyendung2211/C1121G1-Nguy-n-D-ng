@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt("độ dài mảng"));
+    let array = new Array(n);
+    for (let i =0;i<array.length;i++) {
+        array[i] = prompt("nhập phần tử thứ "+ i);
+    }
+    let kiTu = prompt("nhập một kí tự bất kì");
+    document.write(kiemTra(array,kiTu));
+    function kiemTra(array,kiTu) {
+        let cnt = 0;
+        let result;
+        for (let i =0;i<array.length;i++) {
+            if (array[i] === kiTu) {
+                cnt++;
+                result= cnt;
+            }
+        }
+        if(cnt == 0){
+            result =  -1}
+
+        return result;
+    }
+</script>
+</body>
+</html>
