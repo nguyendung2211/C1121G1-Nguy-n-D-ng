@@ -9,34 +9,34 @@
     <h1>Caculator</h1>
     <input type="text" id="n1"/>
     <input type="text" id="n2"/><br><br>
-    <button type="button" onclick="Cong()">Addition(+)</button>
-    <button type="button" onclick="Tru()">Addition(-)</button>
-    <button type="button" onclick="Nhan()">Addition(*)</button>
-    <button type="button" onclick="Chia()">Addition(/)</button>
+    <button type="button" onclick="cong()">Addition(+)</button>
+    <button type="button" onclick="tru()">Addition(-)</button>
+    <button type="button" onclick="nhan()">Addition(*)</button>
+    <button type="button" onclick="chia()">Addition(/)</button>
 </form>
 <script>
-    function Cong() {
+    function cong() {
         let n1 = parseInt(document.getElementById("n1").value);
         let n2 = parseInt(document.getElementById("n2").value);
         let result = n1 + n2
         alert("Tổng =" + result)
     }
 
-    function Tru() {
+    function tru() {
         let n1 = parseInt(document.getElementById("n1").value);
         let n2 = parseInt(document.getElementById("n2").value);
         let result = n1 - n2
         alert("Hiệu =" + result)
     }
 
-    function Nhan() {
+    function nhan() {
         let n1 = parseInt(document.getElementById("n1").value);
         let n2 = parseInt(document.getElementById("n2").value);
         let result = n1 * n2
         alert("Tích =" + result)
     }
 
-    function Chia() {
+    function chia() {
         let n1 = parseInt(document.getElementById("n1").value);
         let n2 = parseInt(document.getElementById("n2").value);
         let result = n1 / n2
