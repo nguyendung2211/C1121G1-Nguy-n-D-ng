@@ -10,17 +10,17 @@
         constructor(doC) {
             this.doC = doC;
         }
-        getdoF(){
+        getDoF(){
             let doF = (this.doC * 9)/ 5 + 32;
             return doF;
         }
-        getK(){
+        getDoK(){
             let doK = (this.doC) + 237.15;
             return doK;
         }
     }
     let temperature = new Temperature(25)
-    alert("độ F :" + temperature.getdoF() + " & độ K :" + temperature.getK())
+    alert("độ F :" + temperature.getDoF() + " & độ K :" + temperature.getDoK())
 </script>
 </body>
 </html>

@@ -11,32 +11,20 @@
             this.chieuDai= chieuDai;
             this.chieuRong= chieuRong;
         }
-        getChieudai(){
-            return this.chieuDai;
-        }
-        setChieudai(chieuDai){
-            this.chieuDai = chieuDai;
-        }
-        getChieurong(){
-            return this.chieuRong;
-        }
-        setChieurong(chieuRong){
-            this.chieuRong = chieuRong;
-        }
-        getDientich(chieuDai,chieuRong){
-            return this.getChieudai() * this.getChieurong();
+        getDientich(){
+            return this.chieuDai * this.chieuRong;
         }
         getChuvi(){
-            return (this.getChieudai() + this.getChieurong()) * 2 ;
+            return (this.chieuDai + this.chieuRong) * 2 ;
         }
         toString(){
             return "chu vi là: " + this.getChuvi() + "; dien tich: " + this.getDientich()
         }
     }
 
-    let chieudai = parseInt(prompt("nhap chieu dai: "));
-    let chieurong = parseInt(prompt("nhap chieu rong: "));
-    let test = new Rectangle(chieudai,chieurong);
+    let chieuDai = parseInt(prompt("nhap chieu dai: "));
+    let chieuRong = parseInt(prompt("nhap chieu rong: "));
+    let test = new Rectangle(chieuDai,chieuRong);
     let result = test.toString();
     console.log(result)
 </script>

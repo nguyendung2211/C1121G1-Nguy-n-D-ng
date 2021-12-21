@@ -5,26 +5,22 @@
     <title>Title</title>
 </head>
 <body>
-<form>
-    <label>Enter Name of Star</label>
-    <input type="text" id="inputStar" name="star">
-    <input type="button" onclick="searchStar()" value="search">
-    <p id="display"></p>
-</form>
+
 <script>
-    function searchStar() {
-        let star = document.getElementById("inputStar").value;
+    function searchStar(a) {
         let arrayStar = ['polaris', 'aldebaran', 'deneb', 'vega', 'altair', 'dubhe', 'regulus'];
         let constellation = ['ursa minor', 'tarurus', 'cygnus', 'lyra', 'aquila', 'ursa major', 'leo'];
         for (let i = 0; i < arrayStar.length; i++) {
             if (star === arrayStar[i]) {
-                document.getElementById("display").innerHTML = constellation[i];
+               console.log(constellation[i]);
                 break;
             } else {
-                document.getElementById("display").innerHTML = "không có ngôi sao bạn vừa tìm";
+                console.log("không tìm thấy sao.");
             }
         }
     }
+    let star = prompt("Nhập sao");
+    searchStar(star);
 </script>
 </body>
 </html>
