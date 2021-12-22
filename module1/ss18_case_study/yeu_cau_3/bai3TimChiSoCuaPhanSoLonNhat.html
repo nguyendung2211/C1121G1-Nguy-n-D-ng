@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tuSo = [5,2,5];
+    let mauSo = [6,3,4];
+    let max = Math.max(tuSo[0]/mauSo[0],tuSo[1]/mauSo[1],tuSo[2]/mauSo[2]);
+    for(let i = 0; i < tuSo.length;i++){
+        if(tuSo[i]/mauSo[i] === max){
+            console.log("Vị trí thứ "+ i + " phân số lớn nhất "+ tuSo[i] +"/"+ mauSo[i]);
+            break;
+        }
+    }
+</script>
+</body>
+</html>
