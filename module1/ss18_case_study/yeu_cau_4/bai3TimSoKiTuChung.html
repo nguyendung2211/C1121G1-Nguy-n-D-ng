@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kiTu1 = prompt("Nhập chuỗi ký tự 1");
+    let kiTu2 = prompt("Nhập chuỗi kí tự 2");
+    let kq = "";
+    for (let i = 0; i < kiTu1.length; i++) {
+        if (kiTu2.indexOf(kiTu1[i]) !== -1) {
+            kq += kiTu1[i];
+            kiTu2 = kiTu2.slice(0, kiTu2.indexOf(kiTu1[i])) + kiTu2.slice(kiTu2.indexOf(kiTu1[i]) + 1, kiTu2.length);
+        }
+    }
+    alert(kq.length);
+</script>
+</body>
+</html>
