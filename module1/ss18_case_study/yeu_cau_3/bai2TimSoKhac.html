@@ -6,28 +6,21 @@
 </head>
 <body>
 <script>
-let x1 = parseInt(prompt("Nhập số lượng phần tử trong mảng x1:"));
-let x2 = parseInt(prompt("Nhập số lượng phần tử trong mảng x2:"));
-let array1 = new Array(x1);
-let array2 = new Array(x2);
-let arrayNew = [];
-for(let i = 0; i < array1.length; i++){
-    array1[i] = parseInt(prompt("Nhập phần tử thứ: "+ i));
-}
-console.log(array1);
-for(let i = 0; i < array2.length; i++){
-    array2[i] = parseInt(prompt("Nhập phần tử thứ: "+ i));
-}
-console.log(array2);
-for(let i = 0; i < array2.length; i++){
-    for(let j = 0; j < array1.length; j++){
-        if(array2[i] == array1[j]){
-            array2.splice(i,1);
-            arrayNew.push(array2[j]);
-        }
+let a = [7,2,5,3,5,3];
+let b = [7,2,5,4,6,3,5,3];
+let c = [];
+for(let i = 0; i < a.length; i++){
+    if(! b.includes(a[i])){
+        c.push(a[i]);
     }
 }
-console.log(array2);
+for(let j = 0; j < b.length; j++){
+    if(! a.includes(b[j])){
+        c.push(b[j]);
+    }
+}
+alert(c)
+
 </script>
 </body>
 </html>
