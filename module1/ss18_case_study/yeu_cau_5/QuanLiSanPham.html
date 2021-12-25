@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="Biển số" id="bienSo">
+<input type="text" placeholder="Chủ sở hữu" id="chuSoHuu">
+<input type="text" placeholder="Dung tich xi lanh" id="dungTichXL">
+<input type="button" value="Thêm mới" onclick="themMoi">
+<input type="button" value="Lưu" onclick="luu">
+<p id="hienThi"></p>
+<script>
+    class XeMay{
+        constructor(bienSo,chuSoHuu,dungTichXiLanh) {
+            this.bienSo = bienSo;
+            this.chuSoHuu = chuSoHuu;
+            this.dungTichXiLanh = dungTichXiLanh;
+        }
+        setBienSo(bienSo){
+            this.bienSo = bienSo;
+        }
+        getBienSo(){
+            return this.bienSo;
+        }
+        setChuSoHuu(chuSoHuu){
+            this.chuSoHuu = chuSoHuu;
+        }
+        getChuSoHuu(){
+            return this.chuSoHuu;
+        }
+        setDungTichXiLanh(dungTichXiLanh){
+            this.dungTichXiLanh = dungTichXiLanh;
+        }
+        getDungTichXiLanh(){
+            return this.dungTichXiLanh;
+        }
+    }
+    let xe1 = new XeMay("92-c1-18833","Dũng","120");
+    let xe2 = new XeMay("92-c1-18834","Dũng2","120");
+    let xe3 = new XeMay("92-c1-18835","Dũng3","120");
+    let danhSachXe = [xe1, xe2, xe3];
+    hienThi(danhSachXe);
+
+    function hienThi(danhSach) {
+        let bang = '<table border="1" style="border-collapse: collapse">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Biển KS</th>\n' +
+            '        <th>Chủ Sở Hữu</th>\n' +
+            '        <th>Dung tích xi lanh</th>\n' +
+            '        <th>Chỉnh sửa </th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            bang += '<tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getBienSo() + '</td>\n' +
+                '        <td>' + danhSach[i].getChuSoHuu() + '</td>\n' +
+                '        <td>' + danhSach[i].getDungTichXiLanh() + '</td>\n' +
+                '        <td><input type="button" value="Edit" onclick="chinhSua(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Delete" onclick="xoaXe(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        bang += '</table>'
+
+        document.getElementById("hienThi").innerHTML= bang;
+    }
+</script>
+</body>
+</html>
